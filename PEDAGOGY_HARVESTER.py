@@ -14,27 +14,27 @@ def harvest():
     """
     if not os.path.exists(LOG_FILE):
         return
-        
+
     print("--- 🧠 HARVESTING GLOBAL PEDAGOGY ---")
-    
+
     with open(LOG_FILE, 'r') as f:
         lines = f.readlines()
-        
+
     new_patterns = []
     # Use a set to prevent duplicate pattern harvesting in the same run
     seen_patterns = set()
-    
+
     for line in lines:
         try:
             entry = json.loads(line)
             ask = entry.get("ask", "")
             response = entry.get("response", "")
-            
+
             # Filter for meaningful, successful logic (min length and no errors)
             if len(response) > 8 and not "[ERROR]" in response and ask not in seen_patterns:
                 new_patterns.append(f"- **Intent:** {ask}\n  **Pattern:** `{response}`\n")
                 seen_patterns.add(ask)
-        except:
+        except Exception:
             pass
 
     if new_patterns:

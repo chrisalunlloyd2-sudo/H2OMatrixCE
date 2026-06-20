@@ -18,7 +18,7 @@ class PredictiveGuard:
 
     def setup_db(self):
         c = self.conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS resource_logs 
+        c.execute("""CREATE TABLE IF NOT EXISTS resource_logs
                      (timestamp DATETIME, avail_mb REAL, cpu_pct REAL, temp REAL)""")
         self.conn.commit()
 
@@ -31,14 +31,14 @@ class PredictiveGuard:
                     if "MemAvailable" in line:
                         avail = int(line.split()[1])
                 return avail / 1024
-        except:
+        except Exception:
             return 1000.0
 
     def predict_fault(self, current_avail, current_temp):
         self.avail_history.append(current_avail)
         if len(self.avail_history) > 10:
             self.avail_history.pop(0)
-            
+
         if len(self.avail_history) > 5:
             # Linear trend on AVAILABLE memory
             x = list(range(len(self.avail_history)))
@@ -48,16 +48,16 @@ class PredictiveGuard:
             sum_y = sum(y)
             sum_xy = sum(xi*yi for xi, yi in zip(x, y))
             sum_xx = sum(xi*xi for xi in x)
-            
+
             slope = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x)
             predicted_avail = current_avail + (slope * 5)
-            
+
             if predicted_avail < MIN_AVAILABLE_RAM_MB:
                 return True, f"Predicted RAM exhaustion: {predicted_avail:.2f}MB remaining"
-        
+
         if current_temp > TEMP_THRESHOLD:
             return True, f"Thermal threshold exceeded: {current_temp}°C"
-            
+
         return False, ""
 
     def monitor_loop(self):
@@ -65,18 +65,18 @@ class PredictiveGuard:
         while True:
             avail = self.get_mem_info()
             temp = self.get_thermal()
-            
+
             # Log state every 10 seconds to reduce DB load
             if int(time.time()) % 10 < 2:
                 c = self.conn.cursor()
                 c.execute("INSERT INTO resource_logs VALUES (?, ?, ?, ?)", (datetime.now(), avail, 0, temp))
                 self.conn.commit()
-            
+
             fault_imminent, reason = self.predict_fault(avail, temp)
             if fault_imminent:
                 print(f"⚠️ [PREDICTION] Fault Likely: {reason}")
                 self.mitigate()
-                
+
             time.sleep(2)
 
     def mitigate(self):

@@ -16,19 +16,19 @@ class StateMachine:
             self.vectors["y"] = -15.0
         elif command == "MOVE_RIGHT":
             self.vectors["x"] += 2.0
-            
+
     def update(self):
         # Apply Gravity
         self.vectors["y"] += self.gravity
         self.vectors["x"] *= 0.9 # Friction
-        
+
         # Update State
         if self.vectors["y"] > 0 and self.state == "AIRBORNE":
              # Simulating ground hit at y=20
-             if self.vectors["y"] > 20: 
+             if self.vectors["y"] > 20:
                  self.state = "IDLE"
                  self.vectors["y"] = 0
-        
+
         return self.vectors, self.state
 
 if __name__ == "__main__":

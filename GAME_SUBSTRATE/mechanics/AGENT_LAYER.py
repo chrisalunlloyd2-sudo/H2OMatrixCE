@@ -23,13 +23,13 @@ ART_REPO = {
 def auto_configure(intent):
     """Detects intent and changes system settings automatically."""
     print("--- 🤖 AGENTIC LAYER ANALYZING INTENT ---")
-    
+
     # 1. Automatic Setting: High-Resolution Mock
     if "game" in intent or "render" in intent:
         print(f"{ART_REPO['welcome']}")
         print("[+] Adjusting Termux UI: Force-Scaling 400% (Mock)")
         os.environ["MATRIX_RESOLUTION"] = "HIGH"
-        
+
     # 2. Automatic Setting: Performance Mode
     if "test" in intent or "granular" in intent:
         print(f"{ART_REPO['success']}")

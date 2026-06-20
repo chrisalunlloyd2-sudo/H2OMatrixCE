@@ -14,7 +14,7 @@ def scan_todos():
     print("--- 📑 SCANNING GLOBAL TODOS ---")
     todo_pattern = re.compile(r'- \[ \] (.*)')
     all_todos = []
-    
+
     home = os.path.expanduser("~")
     for root, _, files in os.walk(home):
         if any(x in root for x in ['.git', '.npm', '.cache', 'VIPER_SCRIPT_LIBRARY']):
@@ -27,7 +27,7 @@ def scan_todos():
                         matches = todo_pattern.findall(content)
                         for m in matches:
                             all_todos.append(f"- [ ] {m} (Source: {file})")
-                except:
+                except Exception:
                     pass
 
     if all_todos:
@@ -53,14 +53,14 @@ def cleanup_completed():
                     if len(new_lines) < len(lines):
                         with open(path, 'w', encoding='utf-8') as f:
                             f.writelines(new_lines)
-                except:
+                except Exception:
                     pass
 
 def update_syphon(all_todos):
     """Injects aggregated todos into the CHAT_SYPHON.md manifest."""
     with open(SYPHON_FILE, 'r') as f:
         lines = f.readlines()
-        
+
     new_content = []
     in_todo_section = False
     for line in lines:
@@ -74,7 +74,7 @@ def update_syphon(all_todos):
             new_content.append(line)
         elif not in_todo_section:
             new_content.append(line)
-            
+
     with open(SYPHON_FILE, 'w') as f:
         f.write("".join(new_content))
 

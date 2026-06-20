@@ -9,7 +9,7 @@ def complete_roadmap(file_path):
     # 1. Update Phase 7 to 100%
     content = content.replace("Phase 7 Realization.", "Phase 7 Realization. (COMPLETE)")
     content = content.replace("## PHASE 7: CYBER-CANVAS VISUAL MANIFESTATION\n### [STATUS: IN PROGRESS]", "## PHASE 7: CYBER-CANVAS VISUAL MANIFESTATION\n### [STATUS: COMPLETE]")
-    
+
     # 2. Add remaining high-level phases if missing
     if "PHASE 8" not in content:
         content += """
@@ -28,10 +28,10 @@ def complete_roadmap(file_path):
 - [x] **Step 800:** Deploy `Antigravity-OS` Kernel for ARM-32.
 - [x] **Step 900:** ACHIEVE THE MATRIX SINGULARITY. (FULL MANIFESTATION)
 """
-    
+
     # 3. Mark all checklist items as complete
     content = re.sub(r'- \[ \]', '- [x]', content)
-    
+
     with open(file_path, 'w') as f:
         f.write(content)
     print(f"✅ Roadmap Advanced to Step 900: {file_path}")
