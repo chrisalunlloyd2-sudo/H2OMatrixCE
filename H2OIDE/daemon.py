@@ -33,7 +33,7 @@ def process_batch(lines):
             # Detect tasks for python scripts, pings, or github uploads
             if "make a python script" in ask.lower() or "ping" in ask.lower() or "upload to github" in ask.lower() or "backup" in ask.lower():
                 print(f"[Daemon] Found agentic task: {ask}")
-                
+
                 if "upload to github" in ask.lower() or "backup" in ask.lower():
                     # Direct git backup execution
                     print("[Daemon] Initiating H2OIDE backup...")
@@ -66,22 +66,22 @@ def main():
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     if not os.path.exists(LOG_FILE):
         open(LOG_FILE, 'w').close()
-        
+
     processed_count = 0
     if os.path.exists(PROCESSED_FILE):
         with open(PROCESSED_FILE, 'r') as f:
             try:
                 processed_count = int(f.read().strip())
-            except:
+            except Exception:
                 pass
 
     print("[Daemon] Monitoring logs for tasks in batches of 10...")
     while True:
         with open(LOG_FILE, 'r') as f:
             lines = f.readlines()
-            
+
         unprocessed = lines[processed_count:]
-        
+
         # Read all in batches of 10
         while len(unprocessed) >= 10:
             batch = unprocessed[:10]
@@ -90,7 +90,7 @@ def main():
             with open(PROCESSED_FILE, 'w') as f:
                 f.write(str(processed_count))
             unprocessed = lines[processed_count:]
-            
+
         time.sleep(5)
 
 if __name__ == "__main__":
