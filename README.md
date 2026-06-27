@@ -1,304 +1,470 @@
-# 🌌 PocketMatrix OS (H2O Matrix CE)
-
-## 📜 The Mission
-The PocketMatrix OS is a fully manifested, 900-step architectural Singularity. It transforms a standard 32-bit Android environment into a distributed, AI-driven Windows CE-styled agentic network. 
-
-**The Core Mission is Gamification & Simplification.** 
-By wrapping highly complex neural-symbolic loops, cross-device network protocols, and agentic orchestration inside a nostalgic, point-and-click Windows CE desktop, the cognitive load required to operate the system is drastically reduced. It provides a visual, interactive workspace where learning (pedagogy) and execution (agentic routing) happen naturally. The user is empowered to orchestrate disparate databases, APIs, and models from a single, unified command center that feels like playing an OS simulation game.
-
-## ✨ Feature Definitions & Rationale
-
-**1. PocketMatrix GUI (Windows CE Interface)**
-* **Definition:** A web-based, high-fidelity replica of the classic Windows CE desktop environment, complete with a taskbar, Start Menu, and draggable windows.
-* **Why we need it:** It replaces cryptic terminal sessions with a gamified, centralized hub. This lowers cognitive overhead, allowing seamless visual interaction with multiple AI tools, databases, and network agents simultaneously.
-
-**2. Danube Omni-Chat (Pocket CMD)**
-* **Definition:** The central nervous system interface. A chat window that routes natural language (like "note: ..." or "remind me to ...") to specific applications, or falls back to the local H2O Danube model to translate intent into raw, executable bash/Win32 commands.
-* **Why we need it:** Eliminates the need to memorize complex CLI syntax. You state the intent; the semantic router handles the execution.
-
-**3. Excel 95 (Database Viewer & CRUD Editor)**
-* **Definition:** A spreadsheet-style window that allows live viewing and editing (Create, Read, Update, Delete) of any SQLite database across the entire network. Utilizes physical ROWIDs for precision saves triggered instantly 'on blur'.
-* **Why we need it:** It provides absolute, visual power over internal matrices, vectors, and state data without requiring the user to write a single line of SQL.
-
-**4. Pocket ToDo (Google Keep Hypersync)**
-* **Definition:** A cross-device reminder system that securely syncs local tasks to an actual Google Keep account via the `gkeepapi`.
-* **Why we need it:** Ensures that agentic intents, reminders, and daily task lists flow out of the local OS sandbox and directly onto the user's physical mobile phone widget.
-
-**5. Pocket Mail (Live Gmail SMTP Bridge)**
-* **Definition:** An email client embedded in the CE desktop that routes KQML messages and system logs directly to real-world inboxes via an encrypted Gmail SMTP bridge.
-* **Why we need it:** Enables the Matrix to communicate autonomously with external human actors, sending automated reports, alerts, and state summaries.
-
-**6. Notes CE (VIPER Link)**
-* **Definition:** A dedicated markdown text editor that reads and writes directly to the `VIPER_SCRIPT_LIBRARY`.
-* **Why we need it:** Facilitates real-time, on-device documentation. The user can rapidly update the system's "cognitive behavioral core" and pedagogical notes directly from the GUI.
-
-**7. Global Explorer (My Documents)**
-* **Definition:** A gamified file explorer that recursively hunts down and groups all projects, kernels, and databases across the entire network into easily clickable desktop icons.
-* **Why we need it:** Provides a unified, structured view of the entire agentic network, ensuring no database or project file is ever "lost" in the deep terminal filesystem.
-
-**8. Task Manager (Kernel View)**
-* **Definition:** A live process monitor attached directly to the underlying OS (`ps` telemetry).
-* **Why we need it:** Allows immediate visual confirmation that local LLMs (`llama`), orchestration loops (`agy`), and Python server bridges are functioning properly and haven't hung.
-
-**9. Internet Explorer (Webcrawl Ingestion)**
-* **Definition:** A specialized knowledge scraper that digests documentation URLs, strips HTML, and forces the Danube AI to translate the raw text into structured "Ask Logic" rules.
-* **Why we need it:** Automates the ingestion of external data. The AI teaches itself by reading FAQs and autonomously forming its own algorithmic instructions.
-
-**10. Dynamic Fault Injector**
-* **Definition:** A pedagogical sandbox tool that deliberately simulates severe OS crashes (e.g., Thread Deadlocks, Memory Corruption) within the CE environment.
-* **Why we need it:** Gamified learning. By intentionally breaking the system, it forces the user to debug C/C++ in real-time, heavily assisted by the Danube AI tutor.
-
-**11. Telemetry Parser**
-* **Definition:** A memory-listening hook that pipes raw, cryptic Windows CE hex dumps and scheduler logs directly into the semantic model via regex filtering.
-* **Why we need it:** Translates legacy OS crashes into plain-text English. The user learns OS internals rapidly without needing to manually decode hex addresses.
-
-**12. Headless Accessibility Bridge**
-* **Definition:** A zero-screen translation layer that converts natural language directly into low-level Win32 C/C++ API calls and executes them via serial/SSH.
-* **Why we need it:** Allows complete automation and control over headless embedded devices or legacy servers without requiring any physical graphical interface.
-
-**13. CeGCC & WCECL Integrations**
-* **Definition:** The inclusion of an open-source cross-compiler (`cegcc`) and Windows CE compatibility layer (`wcecl`).
-* **Why we need it:** Enables native compilation of ARM binaries directly on the Matrix substrate, breaking reliance on proprietary, legacy Microsoft toolchains.
-
-## 📋 TOPOLOGICAL FILE TREE
-```text
-├── PocketMatrix/
-    ├── documents/
-        ├── PROJECT_H2O/
-            ├── ledger.db
-            ├── main.db
-            ├── evolution.db
-            ├── continue_config.json
-        ├── PROJECT_GENETIC_FLOW/
-            ├── topology.json
-        ├── PROJECT_SINGULARITY/
-            ├── main.db
-            ├── ledger.db
-            ├── evolution.db
-        ├── PROJECT_POCKET_MATRIX/
-            ├── main.db
-            ├── ledger.db
-            ├── evolution.db
-    ├── system/
-        ├── gui_bridge.py
-        ├── headless_bridge.py
-        ├── fault_injector.py
-        ├── telemetry_parser.py
-        ├── ce_simulator.py
-        ├── google_bridge.py
-        ├── ingestion_engine.py
-        ├── templates/
-            ├── desktop.html
-        ├── static/
-            ├── icons/
-    ├── apps/
-    ├── core/
-        ├── build_manifest.json
-        ├── wcecl/
-            ├── CODE_OF_CONDUCT.md
-            ├── CONTRIBUTING.md
-            ├── LICENSE
-            ├── README.md
-            ├── WinCeCompatLayer.sln
-            ├── logo.png
-            ├── COREDLL/
-                ├── COREDLL.vcxproj
-                ├── COREDLL.vcxproj.filters
-                ├── Exports.def
-                ├── commctrl_wcecl.cpp
-                ├── dbgapi_wcecl.cpp
-                ├── dllmain.cpp
-                ├── excpt_wcecl.cpp
-                ├── imm_wcecl.cpp
-                ├── mmsystem_wcecl.cpp
-                ├── other.cpp
-                ├── shellapi_wcecl.cpp
-                ├── stdafx.cpp
-                ├── stdafx.h
-                ├── stdio_wcecl.cpp
-                ├── stdio_wcecl.h
-                ├── stringapiset_wcecl.cpp
-                ├── strsafe_wcecl.cpp
-                ├── targetver.h
-                ├── wcecl_dialogs.cpp
-                ├── wcecl_memtools.cpp
-                ├── winbase_wcecl.cpp
-                ├── windows_wcecl.cpp
-                ├── wingdi_wcecl.cpp
-                ├── winnls_wcecl.cpp
-                ├── winreg_wcecl.cpp
-                ├── winuser_wcecl.cpp
-                ├── winuser_wcecl.h
-            ├── CoredllTest/
-                ├── CoredllTest.cpp
-                ├── CoredllTest.vcxproj
-                ├── CoredllTest.vcxproj.filters
-                ├── pch.cpp
-                ├── pch.h
-            ├── HeaderToFunction/
-                ├── HeaderSearch.cs
-                ├── HeaderToFunction.csproj
-                ├── MainWindow.Designer.cs
-                ├── MainWindow.cs
-                ├── MainWindow.resx
-                ├── Program.cs
-                ├── SearchCfgDlg.Designer.cs
-                ├── SearchCfgDlg.cs
-                ├── SearchCfgDlg.resx
-                ├── SearchDlg.Designer.cs
-                ├── SearchDlg.cs
-                ├── SearchDlg.resx
-                ├── SearchProcessDlg.Designer.cs
-                ├── SearchProcessDlg.cs
-                ├── SearchProcessDlg.resx
-                ├── Properties/
-                    ├── AssemblyInfo.cs
-                    ├── Resources.Designer.cs
-                    ├── Resources.resx
-                    ├── Settings.Designer.cs
-                    ├── Settings.settings
-            ├── SubsystemTool/
-                ├── SubsystemTool.cpp
-                ├── SubsystemTool.vcxproj
-                ├── SubsystemTool.vcxproj.filters
-                ├── pch.cpp
-                ├── pch.h
-        ├── cegcc/
-            ├── README.md
-... (Truncated for readability)
-```
-
-## ⚡ CORE PERFORMATIVES
-- `[PERFORMATIVE: INITIALIZE]` - Project manifestation and repository creation.
-- `[PERFORMATIVE: SYNC_P2P]` - Decentralized ledger state alignment.
-- `[PERFORMATIVE: BROADCAST]` - Global network intent propagation.
-- `[PERFORMATIVE: RENDER]` - GL-accelerated UI / PocketMatrix GUI triggers.
-- `[PERFORMATIVE: TUNE]` - Automatic hyper-parameter mutation based on fitness.
-- `[PERFORMATIVE: HASH]` - Vault and network integrity verification.
-- `[PERFORMATIVE: DARWIN]` - Neural-symbolic fitness scoring and selection.
-- `[PERFORMATIVE: INGEST]` - Webcrawl processing and Ask Logic digestion.
-- `[PERFORMATIVE: HANDOFF]` - Encrypted agentic task migration to peer nodes.
-
-
-# --- FOUNDRY v10.2 RESTORATION & EXPANSION ---
 # H2OMatrixCE
-## v10.2 System Bible
-### Overview
 
-H2OMatrixCE is a cutting-edge, open-source project that embodies the pinnacle of autonomous agentic development. This repository serves as a testament to the relentless pursuit of excellence, adhering strictly to the v10.2 spec.
+> H2OMatrixCE — part of the Viper RAID-0 workstation system.
 
-### Visual Badges
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://img.shields.io/badge/Build-Passing-green.svg)](https://github.com/openrouter/H2OMatrixCE/actions)
-[![Version](https://img.shields.io/badge/Version-10.2-orange.svg)](https://github.com/openrouter/H2OMatrixCE/releases)
+*Auto-generated 2026-06-26 20:10 from source — branch `main`, 59 Python modules, 67 other files.*
 
-### ASCII Architecture
+## Architecture
+
 ```
-├── .git/
-├── README.md
-├── LICENSE
-├── ROADMAP.md
-├── CHANGELOG.md
-├── Blueprint
-│   ├── dataflows
-│   │   ├── ascii_data_flow_chart.txt
-│   │   └── ...
-│   └── ...
-├── src/
-│   ├── main.py
-│   ├── utils.py
-│   ├── models.py
-│   └── ...
-├── tests/
-│   ├── test_main.py
-│   ├── test_utils.py
-│   ├── test_models.py
-│   └── ...
-├── docs/
-│   ├── getting_started.md
-│   ├── technical_bible.md
-│   ├── faq.md
-│   └── ...
-├── android/
-│   ├── build_apk.sh
-│   ├── AndroidManifest.xml
-│   └── ...
-└── windows/
-    ├── setup.py
-    ├── requirements.txt
-    └── ...
-```
-
-### Deep Dive Descriptions
-
-H2OMatrixCE is designed to revolutionize the field of autonomous agentic development. With its cutting-edge architecture and meticulous documentation, this project sets a new standard for open-source repositories.
-
-### Axiomatic Breakdowns
-
-1. **UI:** The user interface is designed to be intuitive and user-friendly, providing a seamless experience for developers and users alike.
-2. **DB:** The database schema is carefully crafted to ensure efficient data storage and retrieval, utilizing the latest advancements in database technology.
-3. **State:** The state management system is designed to handle complex state transitions with ease, ensuring a robust and reliable application.
-4. **API:** The API is meticulously documented and designed to provide a comprehensive set of endpoints for interacting with the application.
-
-### Multi-Platform Setups
-
-#### Windows Setup
-1. Install Python 3.10+ from [python.org](https://www.python.org/downloads/)
-2. Open PowerShell
-3. Run: `pip install -r requirements.txt`
-4. Execute: `python src/main.py`
-
-#### Android Setup
-1. Install Termux
-2. `pkg install python git`
-3. `pip install -r requirements.txt`
-4. `python src/main.py`
-
-### ASCII Data Flow Chart
-```
-                                      +---------------+
-                                      |  User Input  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  Input Validation  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  Data Processing  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  Database Storage  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  API Endpoints  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  Response Generation  |
-                                      +---------------+
-                                             |
-                                             |
-                                             v
-                                      +---------------+
-                                      |  User Output  |
-                                      +---------------+
+  .director_payload.md
+  .gitconfig
+  .gitignore
+  900_STEPS_SINGULARITY.md
+  BUDGET_CREDITS.md
+  Blueprint.md
+  CHANGELOG.md
+  CLIDE_SPEC.md
+  ENTERPRISE_INIT.p
+  GEMINI.md
+  H2O_MATRIX_SOP.p
+  LOGOS_PURPOSE.md
+  GAME_SUBSTRATE/
+    mechanics/
+      AGENT_LAYER.py
+      CYBER_CANVAS_TUI.py
+      DETERMINISTIC_PHYSICS.py
+  H2OIDE/
+    Blueprint.md
+    CHANGELOG.md
+    DATA_FLOW.md
+    ENTERPRISE_INIT.p
+    GLOBAL_PEDAGOGY.md
+    PEDAGOGY_LEDGER_DUMP.sql
+    PROJECT_LOG.md
+    PROMPT_GUIDE.md
+    README.md
+    README_ENTERPRISE.md
+    SESSION_CHATS.jsonl
+    agy
+    skills/
+      terminal.json
+    teaching_sandbox/
+      a.py
+  PocketMatrix/
+    build_apk/
+      AndroidManifest.xml
+      compiled_res.zip
+      bin/
+        PocketMatrix.stable.zip
+        classes.dex
+        debug.keystore
+      obj/
+      res/
+      src/
+    core/
+      build_manifest.json
+      cegcc/
+        README.md
+      wcecl/
+    documents/
+      PROJECT_GENETIC_FLOW/
+        topology.json
+      PROJECT_H2O/
+        continue_config.json
+    system/
+      ce_simulator.py
+      chat_harvester.py
+      datacenter_sync.sh
+      fault_injector.py
+      google_bridge.py
+      gui_bridge.py
+      headless_bridge.py
+      ingestion_engine.py
+      positive_ping.py
+      quarantine_filter.py
+      telemetry_parser.py
+      templates/
+        desktop.html
+  VIPER_SCRIPT_LIBRARY/
+  agy-cli-go/
+    agy-go
+    go.mod
+    main.go
+  build_staging/
+    agy
+  genetic_flow/
+    .aider.conf.json
+    .env
+    .gitignore
+    __init__.py
+    install_genetic_flow.sh
+    runtime_loop.py
+    ...
 ```
 
-[CMD]
-```bash
-git add .
-git commit -m "Standardized H2OMatrixCE to v10.2 System Bible spec"
-git push origin main
+## Dependencies
+
+External packages imported by this project:
+
+`PocketMatrix`, `asyncpg`, `bs4`, `core_brain`, `dis`, `dotenv`, `email`, `flask`, `genetic_flow`, `gkeepapi`, `kqml_protocol`, `openai`, `rag_pipeline`, `requests`, `rich`, `smtplib`
+
+## How to run
+
+Executable entry points (have a `__main__` block):
+
+- `python GAME_SUBSTRATE/mechanics/AGENT_LAYER.py`
+- `python GAME_SUBSTRATE/mechanics/CYBER_CANVAS_TUI.py`
+- `python GAME_SUBSTRATE/mechanics/DETERMINISTIC_PHYSICS.py`
+- `python H2OIDE/daemon.py`
+- `python H2OIDE/initialize_enterprise_project.py`
+- `python H2OIDE/network_hook.py`
+- `python H2OIDE/pedagogy_loop.py`
+- `python PEDAGOGY_HARVESTER.py`
+- `python PocketMatrix/system/ce_simulator.py`
+- `python PocketMatrix/system/chat_harvester.py`
+- `python PocketMatrix/system/fault_injector.py`
+- `python PocketMatrix/system/google_bridge.py`
+
+## Modules
+
+### `GAME_SUBSTRATE/mechanics/AGENT_LAYER.py`
+
+- `auto_configure(intent)` — Detects intent and changes system settings automatically.
+
+### `GAME_SUBSTRATE/mechanics/DETERMINISTIC_PHYSICS.py`
+
+- **class `StateMachine`**
+  - methods: `process_input`, `update`
+
+### `H2OIDE/daemon.py`
+
+- `call_llm(prompt)`
+- `process_batch(lines)`
+- `main()`
+
+### `H2OIDE/genetic_optimizer.py`
+
+- `fitness(response_text, duration)`
+
+### `H2OIDE/initialize_enterprise_project.py`
+
+- `get_token()`
+- `generate_ascii_tree(path)` — ASCII tree generator.
+- `initialize()`
+
+### `H2OIDE/network_hook.py`
+
+- `webhook()`
+
+### `H2OIDE/pedagogy_loop.py`
+
+- `log_to_ledger(task, cmd)`
+- `call_llm_agy(task)`
+- `teach()`
+
+### `PEDAGOGY_HARVESTER.py`
+
+- `harvest()` — Autonomous Pedagogy Harvester
+
+### `PocketMatrix/system/ce_simulator.py`
+
+- **class `CESubstrateSimulator`** — Simulates a remote Windows CE device for local testing and pedagogy.
+  - methods: `get_status`, `simulate_shell`
+
+### `PocketMatrix/system/chat_harvester.py`
+
+- `extract_todos()`
+
+### `PocketMatrix/system/fault_injector.py`
+
+- **class `DynamicFaultInjector`**
+  - methods: `inject_fault`, `tutor_student`
+
+### `PocketMatrix/system/google_bridge.py`
+
+- `load_credentials()` — Loads Google credentials (Email and App Password) from config.
+- `send_gmail(to_addr, subject, body, retries)` — Sends an email via Gmail SMTP using an App Password with exponential backoff.
+- `sync_keep(tasks, retries)` — Syncs the local PocketMatrix ToDo database with Google Keep with backoff.
+
+### `PocketMatrix/system/gui_bridge.py`
+
+- `desktop()`
+- `omni_chat()`
+- `list_projects()`
+- `list_databases()`
+- `query_database()`
+- `update_database()`
+- `handle_notes()`
+- `handle_todo()`
+- `sync_todo_google()`
+- `get_mail()`
+- `send_mail()`
+- `web_crawl()`
+- `get_tasks()`
+- `list_files()`
+- `read_file()`
+
+### `PocketMatrix/system/headless_bridge.py`
+
+- **class `HeadlessBridge`**
+  - methods: `translate_and_execute`
+
+### `PocketMatrix/system/ingestion_engine.py`
+
+- **class `IngestionEngine`**
+  - methods: `clean_text`, `fetch_and_parse`, `format_for_danube`
+
+### `PocketMatrix/system/positive_ping.py`
+
+- `generate_ping()`
+
+### `PocketMatrix/system/quarantine_filter.py`
+
+- `isolate_anomalies()`
+
+### `PocketMatrix/system/telemetry_parser.py`
+
+- **class `TelemetryParser`**
+  - methods: `generate_mock_telemetry`, `analyze_telemetry`
+
+### `TODO_SCANNER.py`
+
+- `scan_todos()` — High-Fidelity Todo Scanner
+- `cleanup_completed()` — Removes [x] tasks from substrate to keep entropy low.
+- `update_syphon(all_todos)` — Injects aggregated todos into the CHAT_SYPHON.md manifest.
+
+### `complete_roadmap.py`
+
+- `complete_roadmap(file_path)`
+
+### `genetic_flow/cluster/sync_hook.py`
+
+- `sync_bayesian_weights()` — Bridge ledger.db quantum_parameters into the genetic flow loop.
+- `export_optimization_stats()` — Export genetic progress back to the main IDE ledger.
+
+### `genetic_flow/cluster/topology_mapper.py`
+
+- `initialize_cluster_table()`
+- `update_heartbeat(node_id)` — Updates the heartbeat for a specific cluster node.
+- `get_cluster_topology()` — Returns a string representation of the cluster topology for the TUI.
+
+### `genetic_flow/core_brain/binary_engine/decompiler.py`
+
+- **class `BinaryDecompilationEngine`** — Airgapped processor that translates Python logic into binary opcode math.
+  - methods: `decompile_and_score`
+
+### `genetic_flow/core_brain/router.py`
+
+- **class `LocalAgentRouter`** — [PERFORMATIVE: ROUTE] Native 32-bit llama-cli Wrapper with KQML/Vector Handoff.
+  - methods: `get_management_rules`, `run_generation`, `clean_code`
+- `extract_clean_code(raw_stream)`
+
+### `genetic_flow/core_brain/target_feature.py`
+
+- `algorithm(n)`
+
+### `genetic_flow/core_brain/test_harness.py`
+
+- **class `StatisticalEvaluator`** — [PERFORMATIVE: EVALUATE] Evaluates microsecond trends via IQR variance algorithms (Pure Python).
+  - methods: `evaluate_performance`
+- `evaluate()`
+
+### `genetic_flow/core_brain/tui_layout.py`
+
+- `get_last_insight()`
+- `generate_dashboard(gen, fitness, code_str, stuck_count, max_stuck, sprite_status)`
+
+### `genetic_flow/core_brain/watchdog.py`
+
+- **class `Watchdog`**
+  - methods: `check_stagnation`, `get_hyperparameter_adjustment`, `trigger_cloud_escalation`
+
+### `genetic_flow/master_logic/gemini_agent.py`
+
+- `get_embedding(text)`
+- `fetch_memory_context(goal)`
+- `run_cmd(cmd)`
+- `fix_step(step_data, error_output, sys_constraints, decompiler, max_retries)`
+- `main(goal)`
+
+### `genetic_flow/memory_daemon/gemini_client.py`
+
+- `send_to_daemon(command, exit_code)`
+
+### `genetic_flow/memory_daemon/gemini_daemon.py`
+
+- `process_and_store(payload)` — The heavy lifting she does silently after your terminal is already free.
+- `handle_connection(reader, writer)` — Instantly accepts data from your shell hook and releases it.
+- `main()`
+
+### `genetic_flow/memory_pipeline/audio_engine.py`
+
+- **class `AudioManifestationEngine`** — [PHASE 5.2/5.3] Headless TTS & Async Streaming Engine.
+  - methods: `speak`, `run_audio_feedback`
+
+### `genetic_flow/memory_pipeline/headless_orchestrator.py`
+
+- **class `HeadlessOrchestrator`**
+  - methods: `handle_input`
+
+### `genetic_flow/memory_pipeline/rag_interceptor.py`
+
+- **class `SimpleEmbedder`** — Computes fixed-dimension semantic vector via hashing.
+  - methods: `embed`
+- **class `RAGInterceptor`**
+  - methods: `pre_flight_query`, `log_event`
+
+### `genetic_flow/pyramid/code_sprite.py`
+
+- **class `CodeSprite`** — Autonomous Dependency Sprite: Scans for imports and manifests environment.
+  - methods: `_get_installed_packages`, `scan_and_fix`
+
+### `genetic_flow/runtime_loop.py`
+
+- `main_loop(max_gen)`
+
+### `genetic_flow/symbolic_brain/engine.py`
+
+- **class `SymbolicContextEngine`** — [PERFORMATIVE: TOKENIZE] Compiles dynamic AST tree; extracts parent/child shapes.
+  - methods: `get_structural_signature`, `_walk_signature`, `generate_context_hash`, `update_relational_matrix`
+- **class `ProductionRuleMatcher`** — [PERFORMATIVE: MATCH] Inductive Logic Loop matching pattern variations.
+  - methods: `match_rule`
+- **class `MutationInjector`** — [PERFORMATIVE: INJECT] Executes physical AST block mutations.
+  - methods: `apply_mutation`
+- **class `WeightBackpropagator`** — [PERFORMATIVE: UPDATE] Symbolic Backprop Step.
+  - methods: `backprop`
+
+### `genetic_flow/symbolic_brain/extractor.py`
+
+- **class `SymbolicExtractor`** — Extracts symbolic rules from successful mutations in the ledger.
+  - methods: `analyze_patterns`
+
+### `genetic_flow/symbolic_brain/parser.py`
+
+- **class `SymbolicParser`** — [PERFORMATIVE: TOKENIZE] Compiles live files into structured AST nodes.
+  - methods: `get_signature_hash`, `_get_structural_string`, `map_token_relations`
+
+### `genetic_flow/symbolic_brain/symbolic_inference.py`
+
+- **class `SymbolicInference`** — [PERFORMATIVE: INFER] Selects target execution transformation rules.
+  - methods: `infer_optimization_directive`
+
+### `genetic_flow/symbolic_brain/weight_backprop.py`
+
+- **class `WeightBackprop`** — [PERFORMATIVE: UPDATE] Calculates code fitness improvements and updates rule weights.
+  - methods: `update_rule_weights`
+
+### `genetic_flow/tracking_db/writer.py`
+
+- `get_git_hash()`
+- `store_mutation(chash, gen, score, code, task, ast_depth, stagnation, latency_delta)`
+
+### `genetic_optimizer.py`
+
+- `fitness(response_text, duration)`
+
+### `initialize_enterprise_project.py`
+
+- `get_token()`
+- `generate_ascii_tree(path)` — Simple ASCII tree generator.
+- `initialize()`
+
+### `predictive_wrapper.py`
+
+- **class `PredictiveGuard`**
+  - methods: `setup_db`, `get_mem_info`, `predict_fault`, `monitor_loop`, `mitigate`
+
+### `scientific_executor.py`
+
+- `log_scientific_step(step_num, step_desc, observation, hypothesis, experiment, result)`
+- `get_next_step()`
+- `mark_step_complete(step_num)`
+- `run_with_limits(command)`
+- `execute_step(step_num, step_desc)`
+
+### `scientific_orchestrator.py`
+
+- **class `ScientificOrchestrator`**
+  - methods: `log_scientific_step`, `get_next_step`, `mark_step_complete`, `run_with_limits`, `orchestrate`
+
+### `scrub_engine.py`
+
+- `scrub_content(content)`
+- `scrub_file(file_path)`
+
+## Public API index
+
+| Module | Function | Signature |
+|--------|----------|-----------|
+| `AGENT_LAYER` | `auto_configure` | `auto_configure(intent)` |
+| `PEDAGOGY_HARVESTER` | `harvest` | `harvest()` |
+| `TODO_SCANNER` | `cleanup_completed` | `cleanup_completed()` |
+| `TODO_SCANNER` | `scan_todos` | `scan_todos()` |
+| `TODO_SCANNER` | `update_syphon` | `update_syphon(all_todos)` |
+| `chat_harvester` | `extract_todos` | `extract_todos()` |
+| `complete_roadmap` | `complete_roadmap` | `complete_roadmap(file_path)` |
+| `daemon` | `call_llm` | `call_llm(prompt)` |
+| `daemon` | `main` | `main()` |
+| `daemon` | `process_batch` | `process_batch(lines)` |
+| `gemini_agent` | `fetch_memory_context` | `fetch_memory_context(goal)` |
+| `gemini_agent` | `fix_step` | `fix_step(step_data, error_output, sys_constraints, decompiler, max_retries)` |
+| `gemini_agent` | `get_embedding` | `get_embedding(text)` |
+| `gemini_agent` | `main` | `main(goal)` |
+| `gemini_agent` | `run_cmd` | `run_cmd(cmd)` |
+| `gemini_client` | `send_to_daemon` | `send_to_daemon(command, exit_code)` |
+| `gemini_daemon` | `handle_connection` | `handle_connection(reader, writer)` |
+| `gemini_daemon` | `main` | `main()` |
+| `gemini_daemon` | `process_and_store` | `process_and_store(payload)` |
+| `genetic_optimizer` | `fitness` | `fitness(response_text, duration)` |
+| `genetic_optimizer` | `fitness` | `fitness(response_text, duration)` |
+| `google_bridge` | `load_credentials` | `load_credentials()` |
+| `google_bridge` | `send_gmail` | `send_gmail(to_addr, subject, body, retries)` |
+| `google_bridge` | `sync_keep` | `sync_keep(tasks, retries)` |
+| `gui_bridge` | `desktop` | `desktop()` |
+| `gui_bridge` | `get_mail` | `get_mail()` |
+| `gui_bridge` | `get_tasks` | `get_tasks()` |
+| `gui_bridge` | `handle_notes` | `handle_notes()` |
+| `gui_bridge` | `handle_todo` | `handle_todo()` |
+| `gui_bridge` | `list_databases` | `list_databases()` |
+| `gui_bridge` | `list_files` | `list_files()` |
+| `gui_bridge` | `list_projects` | `list_projects()` |
+| `gui_bridge` | `omni_chat` | `omni_chat()` |
+| `gui_bridge` | `query_database` | `query_database()` |
+| `gui_bridge` | `read_file` | `read_file()` |
+| `gui_bridge` | `send_mail` | `send_mail()` |
+| `gui_bridge` | `sync_todo_google` | `sync_todo_google()` |
+| `gui_bridge` | `update_database` | `update_database()` |
+| `gui_bridge` | `web_crawl` | `web_crawl()` |
+| `initialize_enterprise_project` | `generate_ascii_tree` | `generate_ascii_tree(path)` |
+| `initialize_enterprise_project` | `generate_ascii_tree` | `generate_ascii_tree(path)` |
+| `initialize_enterprise_project` | `get_token` | `get_token()` |
+| `initialize_enterprise_project` | `get_token` | `get_token()` |
+| `initialize_enterprise_project` | `initialize` | `initialize()` |
+| `initialize_enterprise_project` | `initialize` | `initialize()` |
+| `network_hook` | `webhook` | `webhook()` |
+| `pedagogy_loop` | `call_llm_agy` | `call_llm_agy(task)` |
+| `pedagogy_loop` | `log_to_ledger` | `log_to_ledger(task, cmd)` |
+| `pedagogy_loop` | `teach` | `teach()` |
+| `positive_ping` | `generate_ping` | `generate_ping()` |
+| `quarantine_filter` | `isolate_anomalies` | `isolate_anomalies()` |
+| `router` | `extract_clean_code` | `extract_clean_code(raw_stream)` |
+| `runtime_loop` | `main_loop` | `main_loop(max_gen)` |
+| `scientific_executor` | `execute_step` | `execute_step(step_num, step_desc)` |
+| `scientific_executor` | `get_next_step` | `get_next_step()` |
+| `scientific_executor` | `log_scientific_step` | `log_scientific_step(step_num, step_desc, observation, hypothesis, experiment, result)` |
+| `scientific_executor` | `mark_step_complete` | `mark_step_complete(step_num)` |
+| `scientific_executor` | `run_with_limits` | `run_with_limits(command)` |
+| `scrub_engine` | `scrub_content` | `scrub_content(content)` |
+| `scrub_engine` | `scrub_file` | `scrub_file(file_path)` |
+
+## Status
+
+- Branch: `main`
+- Last commit: 2026-06-20 17:35:11 -0600
+- File types: .md ×31, .sh ×9, .json ×6, .p ×3, .txt ×2, .go ×2, .sql ×2, .xml ×2
+
+### Recent commits
+```
+b39924a [Moe autonomous] H2OMatrixCE 2026-06-20 17:35
+6ebb61a [Moe autonomous] H2OMatrixCE 2026-06-20 13:23
+21c8371 Standardized H2OMatrixCE to v10.2 System Bible spec
+00da43d Pedagogy: Genetically advanced APK build using dx stable loop. Documented logic in VIPER library.
+5f46636 Deployment: Created APK manifestation script and testing protocol.
+d68c8c3 Enterprise Security: Manifested Datacenter Sync, Positive Pings, and Chat Harvesting.
+377143f Enterprise: Auto-generated gamified README with complete feature definitions.
+dc25d16 Global OS: Manifested GUI Task Manager and Global Recursive File Explorer.
+```
+
+---
+*README generated by `readme_generator.py` (Viper). Deterministic — derived from source, not LLM prose.*
