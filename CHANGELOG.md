@@ -4,6 +4,7 @@ All notable changes to this project.
 
 ## 2026-08
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
+- **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Changed]** [Moe autonomous] H2OMatrixCE 2026-08-02 23:42 ($hash)
 
 ## 2026-06
@@ -56,5 +57,4 @@ All notable changes to this project.
 - **[Changed]** Enterprise: H2O Matrix Unified Manifestation ($hash)
 - **[Changed]** Enterprise: Automated Project Sync ($hash)
 - **[Changed]** Enterprise: Project SOP Manifestation ($hash)
-- **[Changed]** Enterprise: Automated Project Sync ($hash)
 
