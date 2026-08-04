@@ -7,6 +7,7 @@ All notable changes to this project.
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
+- **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Changed]** [Moe autonomous] H2OMatrixCE 2026-08-03 22:52 ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
@@ -56,5 +57,4 @@ All notable changes to this project.
 - **[Changed]** Enterprise: Phase 7 COMPLETE. Advanced CE Telemetry and Pedagogy Hooks integrated. ($hash)
 - **[Changed]** Enterprise: Merged PocketMatrix into main. Manifested Steps 301-310. Public GUI Repository ACTIVE. ($hash)
 - **[Changed]** PocketMatrix: Organized Documents and secure sync protocol ($hash)
-- **[Changed]** Security: Implemented Scrubbing Engine and sanitized all logs/configs. Fixed remote PAT leakage. ($hash)
 
