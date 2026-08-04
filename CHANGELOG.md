@@ -18,6 +18,7 @@ All notable changes to this project.
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Docs]** docs: auto-update [skip-docs] ($hash)
+- **[Docs]** docs: auto-update [skip-docs] ($hash)
 - **[Changed]** [Moe autonomous] H2OMatrixCE 2026-08-02 23:42 ($hash)
 
 ## 2026-06
@@ -56,5 +57,4 @@ All notable changes to this project.
 - **[Changed]** Enterprise: 75% Phase 3 Realization achieved. Master Plan updated. ($hash)
 - **[Changed]** Enterprise: Predictive monitor and APK build scaffold manifested ($hash)
 - **[Changed]** Enterprise: Log update after recovery and sync ($hash)
-- **[Changed]** Enterprise: Converted H2OIDE from submodule to directory for unified sync ($hash)
 
