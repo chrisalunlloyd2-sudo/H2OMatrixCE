@@ -8,6 +8,10 @@ class WeightBackprop:
     """[PERFORMATIVE: UPDATE] Calculates code fitness improvements and updates rule weights."""
 
     def __init__(self, db_path=MEMORY_DB):
+        """Init.
+
+        Args: db_path.
+        """
         self.db_path = db_path
 
     def update_rule_weights(self, rule_id, fitness_improvement):
