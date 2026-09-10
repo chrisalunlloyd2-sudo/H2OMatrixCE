@@ -6,7 +6,6 @@ import time
 LOG_FILE = os.path.expanduser("~/.matrix_ide/state/positive_pings.log")
 
 def generate_ping():
-    """Generate ping (function)."""
     print("📡 [PING GENERATOR] Prompting H2O Danube for an active engagement check...")
 
     # Prompting the LLM to generate a positive validation of its own active state
